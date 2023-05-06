@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Image Crop and Resize</title>
+    <style>
+      body {
+        background-color : rgba(221,220,217,0.873);
+        display : flex;
+        justify-content: center;
+        align-items: center;
+        gap : 10px;
+        flex-direction:column;
+        /* height:100vh; */
+      }
+      #original-image {
+        max-width: 100%;
+        height: auto;
+      }
+
+      #cropped-image {
+        max-width: 100%;
+        height: auto;
+      }
+
+      #resized-image {
+        max-width: 100%;
+        height: auto;
+      }
+      .div1 , .div2 {
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Image Crop and Resize</h1>
+    <input type="file" id="file-input" accept = "image/png/jpeg">
+    <br>
+    <img id="selected-image">
+    <br>
+    <div class="div1">
+      <label for="crop-width">Width:</label>
+      <input type="number" id="crop-width" value="0">
+      <label for="crop-height">Height:</label>
+      <input type="number" id="crop-height" value="0">
+      <button id="crop-button">Crop</button>
+    </div>
+    <br>
+    <img id="cropped-image">
+    <br>
+    <div  class="div2">
+      <label for="resize-width">Width:</label>
+      <input type="number" id="resize-width" value="0">
+      <label for="resize-height">Height:</label>
+      <input type="number" id="resize-height" value="0">
+      <button id="resize-button">Resize</button>
+    </div>
+    <br>
+    <img id="resized-image">
+    <script src="script.js"></script>
+  </body>
+</html>
+
